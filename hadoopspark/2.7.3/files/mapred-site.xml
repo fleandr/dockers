@@ -5,4 +5,37 @@
     <name>mapreduce.framework.name</name>
     <value>yarn</value>
   </property>
+  <property>
+	  <name>mapreduce.map.memory.mb</name>
+	  <value>1600</value>
+  </property>
+  <property>
+	  <name>mapreduce.reduce.memory.mb</name>
+	  <value>1600</value>
+  </property>
+  <property>
+	  <name>mapreduce.map.java.opts</name>
+	  <value> -server -Xms1200M -Xmx1200M -XX:+UseParallelGC</value>
+  </property>
+  <property>
+	  <name>mapreduce.reduce.java.opts</name>
+	  <value> -server -Xms1200M -Xmx1200M -XX:+UseParallelGC</value>
+  </property>
+  <property>
+	    <name>mapreduce.job.reduce.slowstart.completedmaps</name>
+	      <value>0.8</value>
+      </property>
+<property>
+	<name>mapreduce.reduce.input.buffer.percent</name>
+	<value>0.9</value>
+</property>
+<property>
+	   <name>mapreduce.task.io.sort.mb</name>
+	      <value>800</value>
+      </property>
+  <property>
+	  <name>mapreduce.map.sort.spill.percent</name>
+	  <value>0.95</value>
+  </property>
+
 </configuration>
