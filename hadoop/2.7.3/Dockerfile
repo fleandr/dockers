@@ -42,22 +42,5 @@ COPY files/entrypoint.sh files/example_benchmark.sh /root/
 RUN chmod +x /root/entrypoint.sh /root/example_benchmark.sh
 RUN git clone -b 6.0 https://github.com/intel-hadoop/HiBench.git
 
-RUN BUILD_DEPS="curl openjdk-8-jdk" \
-    && set -x \
-    && apt-get update -y && apt-get install -y --no-install-recommends ${BUILD_DEPS} \ 
-    && rm -rf /var/lib/apt/lists/* \
-    && curl ${MIRROR}spark-${SPARK_VERSION}.tgz | tar -xzC /root \
-    && export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::") \
-    && cd /root/spark-${SPARK_VERSION} \
-    && ./dev/change-scala-version.sh 2.11 \
-    && ./make-distribution.sh -Phadoop-2.6 -Pyarn -Pnetlib-lgpl -DskipTests -Dscala-2.11 \
-    && mv dist /opt/spark-${SPARK_VERSION} \
-    && cd /root && rm -r .zinc .m2 spark-${SPARK_VERSION} \
-    && apt-get purge -y --auto-remove ${BUILD_DEPS}
-
-COPY files /root/
-ENV SPARK_MASTER_PORT 7077
-ENV SPARK_WEBUI_PORT 8080
-EXPOSE ${SPARK_MASTER_PORT} ${SPARK_WEBUI_PORT}
 
 ENTRYPOINT ["/root/entrypoint.sh"]
