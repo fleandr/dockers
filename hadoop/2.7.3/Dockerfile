@@ -11,7 +11,8 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
       libgfortran3 \
       liblapack3  \ 
       maven \
-      python
+      python\
+      bc
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-arm64
 
