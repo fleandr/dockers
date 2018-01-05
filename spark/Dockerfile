@@ -6,11 +6,10 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
       libgfortran3 \
       liblapack3 \
       openjdk-8-jdk \
-    && rm -rf /var/lib/apt/lists/*
+      git 
 
-ENV SPARK_VERSION 2.1.0
+ENV SPARK_VERSION 2.3.0
 ENV HADOOP_VERSION 2.7
-ENV MIRROR  https://d3kbcqa49mib13.cloudfront.net/
 ENV SPARK_HOME /opt/spark-${SPARK_VERSION}
 
 # Install Spark
@@ -18,8 +17,9 @@ RUN BUILD_DEPS="curl openjdk-8-jdk" \
     && set -x \
     && apt-get update -y && apt-get install -y --no-install-recommends ${BUILD_DEPS} \
     && rm -rf /var/lib/apt/lists/* \
-    && curl ${MIRROR}spark-${SPARK_VERSION}.tgz | tar -xzC /root \
+    && git clone -b branch-2.3 https://github.com/apache/spark.git \
     && export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::") \
+    && mv spark /root/spark-${SPARK_VERSION} \
     && cd /root/spark-${SPARK_VERSION} \
     && ./dev/change-scala-version.sh 2.11 \
     && ./dev/make-distribution.sh -Phadoop-${HADOOP_VERSION} -Pyarn -Pnetlib-lgpl  -DskipTests  \

@@ -12,18 +12,18 @@ EOS
 
 case $1 in
   master)
-
-    mkdir -p /mnt/ssd4/hadooptmp
+   
+   mkdir -p /mnt/ssd4/hadooptmp
     mkdir -p /mnt/ssd2/hadooptmp
-    mkdir -p /mnt/ssd3/hadooptmp
-    mkdir -p /mnt/ssd2/hdfs/namenode
-    mkdir -p /mnt/ssd3/hdfs/namenode
-    mkdir -p /mnt/ssd4/hdfs/namenode
-    mkdir -p /mnt/ssd2/hdfs/datanode
-    mkdir -p /mnt/ssd3/hdfs/datanode
+     mkdir -p /mnt/ssd3/hadooptmp
+      mkdir -p /mnt/ssd2/hdfs/namenode
+       mkdir -p /mnt/ssd3/hdfs/namenode
+        mkdir -p /mnt/ssd4/hdfs/namenode
+         mkdir -p /mnt/ssd2/hdfs/datanode
+     mkdir -p /mnt/ssd3/hdfs/datanode
     mkdir -p /mnt/ssd4/hdfs/datanode
 
-    # start sshd
+	  # start sshd
     service ssh start
     # update Hadoop config with master hostname
     HOSTNAME=`hostname`
@@ -45,6 +45,15 @@ case $1 in
     ;;
   slave)
     # start sshd
+    mkdir -p /mnt/ssd4/hadooptmp
+        mkdir -p /mnt/ssd2/hadooptmp
+	    mkdir -p /mnt/ssd3/hadooptmp
+	        mkdir -p /mnt/ssd2/hdfs/namenode
+		    mkdir -p /mnt/ssd3/hdfs/namenode
+		        mkdir -p /mnt/ssd4/hdfs/namenode
+			    mkdir -p /mnt/ssd2/hdfs/datanode
+			        mkdir -p /mnt/ssd3/hdfs/datanode
+				    mkdir -p /mnt/ssd4/hdfs/datanode
     service ssh start
     # update Hadoop config with master hostname
     HOSTNAME=${2:-master}
