@@ -11,6 +11,11 @@
   </property>
   <property>
     <name>dfs.datanode.data.dir</name>
-    <value>file:/mnt/ssd4/hdfs/datanode,file:/mnt/ssd3/hdfs/datanode,file:/mnt/ssd2/hdfs/datanode</value>
+    <value>file:/mnt/ssd6/hdfs/datanode,file:/mnt/ssd5/hdfs/datanode,file:/mnt/ssd4/hdfs/datanode,file:/mnt/ssd3/hdfs/datanode,file:/mnt/ssd2/hdfs/datanode</value>
   </property>
+  <property>
+	  <name>dfs.blocksize</name>
+	  <value>256m</value>
+  </property>
+
 </configuration>

@@ -7,7 +7,7 @@
   </property>
   <property>
            <name>hadoop.tmp.dir</name>
-	            <value>/mnt/ssd4/hadooptmp,/mnt/ssd2/hadooptmp,/mnt/ssd3/hadooptmp</value>
+	   <value>/mnt/ssd4/hadooptmp,/mnt/ssd2/hadooptmp,/mnt/ssd3/hadooptmp,/mnt/ssd5/hadooptmp,/mnt/ssd6/hadooptmp,/mnt/ssd8/hadooptmp,/mnt/ssd9/hadooptmp</value>
 		             <description>A base for other temporary directories.</description>
 			              </property>
 </configuration>

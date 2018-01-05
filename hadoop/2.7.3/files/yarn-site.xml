@@ -17,4 +17,13 @@
     <name>yarn.nodemanager.vmem-check-enabled</name>
     <value>false</value>
   </property>
+  <property>
+	  <name>yarn.scheduler.minimum-allocation-mb</name>
+	      <value>1600</value>
+	      </property>
+   <property>
+	   <name>yarn.scheduler.minimum-allocation-mb</name>
+		<value>8120</value>
+	</property>
+
 </configuration>
