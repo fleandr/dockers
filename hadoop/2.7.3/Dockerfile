@@ -54,7 +54,7 @@ RUN ssh-keygen -t rsa -P '' -f /root/.ssh/id_rsa \
 COPY files/*-site.xml ${HADOOP_PREFIX}/etc/hadoop/
 COPY files/entrypoint.sh files/example_benchmark.sh /root/
 RUN chmod +x /root/entrypoint.sh /root/example_benchmark.sh
-RUN git clone -b 6.0 https://github.com/intel-hadoop/HiBench.git
+RUN git clone -b 6.0 https://github.com/fleandr/HiBench.git
 
 
 ENTRYPOINT ["/root/entrypoint.sh"]
