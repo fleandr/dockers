@@ -7,11 +7,11 @@
   </property>
   <property>
     <name>dfs.namenode.name.dir</name>
-    <value>file:/mnt/ssd4/hdfs/namenode,file:/mnt/ssd3/hdfs/namenode,file:/mnt/ssd2/hdfs/namenode</value>
+    <value>file:/mnt/ssd4/hdfs/namenode,file:/mnt/ssd3/hdfs/namenode,file:/mnt/ssd5/hdfs/namenode,file:/mnt/ssd13/hdfs/namenode,file:/mnt/ssd14/hdfs/namenode</value>
   </property>
   <property>
     <name>dfs.datanode.data.dir</name>
-    <value>file:/mnt/ssd6/hdfs/datanode,file:/mnt/ssd5/hdfs/datanode,file:/mnt/ssd4/hdfs/datanode,file:/mnt/ssd3/hdfs/datanode,file:/mnt/ssd2/hdfs/datanode</value>
+    <value>file:/mnt/ssd6/hdfs/datanode,file:/mnt/ssd5/hdfs/datanode,file:/mnt/ssd4/hdfs/datanode,file:/mnt/ssd3/hdfs/datanode,file:/mnt/ssd7/hdfs/datanode,file:/mnt/ssd8/hdfs/datanode,file:/mnt/ssd13/hdfs/datanode,file:/mnt/ssd14/hdfs/datanode,file:/mnt/ssd15/hdfs/datanode,file:/mnt/ssd16/hdfs/datanode,file:/mnt/ssd17/hdfs/datanode</value>
   </property>
   <property>
 	  <name>dfs.blocksize</name>

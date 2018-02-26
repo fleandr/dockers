@@ -3,11 +3,11 @@
 <configuration>
   <property>
     <name>fs.defaultFS</name>
-    <value>hdfs://master:8020</value>
+    <value>hdfs://saber-02:8020</value>
   </property>
   <property>
            <name>hadoop.tmp.dir</name>
-	   <value>/mnt/ssd4/hadooptmp,/mnt/ssd2/hadooptmp,/mnt/ssd3/hadooptmp,/mnt/ssd5/hadooptmp,/mnt/ssd6/hadooptmp,/mnt/ssd8/hadooptmp,/mnt/ssd9/hadooptmp</value>
+	   <value>/mnt/ssd4/hadooptmp,/mnt/ssd7/hadooptmp,/mnt/ssd3/hadooptmp,/mnt/ssd5/hadooptmp,/mnt/ssd6/hadooptmp,/mnt/ssd8/hadooptmp,/mnt/ssd9/hadooptmp,/mnt/ssd13/hadooptmp,/mnt/ssd14/hadooptmp,/mnt/ssd15/hadooptmp,/mnt/ssd16/hadooptmp</value>
 		             <description>A base for other temporary directories.</description>
 			              </property>
 </configuration>

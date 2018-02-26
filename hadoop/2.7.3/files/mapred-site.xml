@@ -5,4 +5,24 @@
     <name>mapreduce.framework.name</name>
     <value>yarn</value>
   </property>
+  <property>
+	        <name>mapreduce.map.memory.mb</name>
+		      <value>2000</value>
+	      </property>
+	      <property>
+		            <name>mapreduce.reduce.memory.mb</name>
+			          <value>2000</value>
+			  </property>
+			  <property>
+				      <name>mapreduce.map.java.opts</name>
+				            <value> -server -Xms1600M -Xmx1600M -XX:+UseParallelGC -XX:ParallelGCThreads=5 -XX:CICompilerCount=5</value>
+				    </property>
+				    <property>
+					    <name>mapreduce.job.reduce.slowstart.completedmaps</name>
+					    <value>0.8</value>
+			            </property>
+				    <property>
+					          <name>mapreduce.reduce.java.opts</name>
+						        <value> -server -Xms1600M -Xmx1600M -XX:+UseParallelGC -XX:ParallelGCThreads=5 -XX:CICompilerCount=5</value>
+						</property>
 </configuration>
