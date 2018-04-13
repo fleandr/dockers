@@ -15,7 +15,7 @@
 			  </property>
 			  <property>
 				      <name>mapreduce.map.java.opts</name>
-				            <value> -server -Xms1600M -Xmx1600M -XX:+UseParallelGC -XX:ParallelGCThreads=5 -XX:CICompilerCount=5</value>
+				            <value> -server -Xms1600M -Xmx1600M -XX:+UseParallelGC -XX:ParallelGCThreads=5  -XX:CICompilerCount=5 </value>
 				    </property>
 				    <property>
 					    <name>mapreduce.job.reduce.slowstart.completedmaps</name>
@@ -23,6 +23,6 @@
 			            </property>
 				    <property>
 					          <name>mapreduce.reduce.java.opts</name>
-						        <value> -server -Xms1600M -Xmx1600M -XX:+UseParallelGC -XX:ParallelGCThreads=5 -XX:CICompilerCount=5</value>
+						        <value> -server -Xms1600M -Xmx1600M -XX:+UseParallelGC -XX:ParallelGCThreads=5 -XX:CICompilerCount=5 </value>
 						</property>
 </configuration>

@@ -12,19 +12,6 @@ EOS
 
 case $1 in
   master)
-   
-   mkdir -p /mnt/ssd4/hadooptmp
-    mkdir -p /mnt/ssd2/hadooptmp
-     mkdir -p /mnt/ssd3/hadooptmp
-      mkdir -p /mnt/ssd2/hdfs/namenode
-       mkdir -p /mnt/ssd3/hdfs/namenode
-        mkdir -p /mnt/ssd4/hdfs/namenode
-         mkdir -p /mnt/ssd2/hdfs/datanode
-     mkdir -p /mnt/ssd3/hdfs/datanode
-    mkdir -p /mnt/ssd4/hdfs/datanode
-
-	  # start sshd
-    service ssh start
     # update Hadoop config with master hostname
     HOSTNAME=`hostname`
     sed -i "s/master/$HOSTNAME/g" $HADOOP_PREFIX/etc/hadoop/core-site.xml
@@ -41,6 +28,8 @@ case $1 in
     $HADOOP_PREFIX/sbin/yarn-daemon.sh --config $HADOOP_PREFIX/etc/hadoop start resourcemanager
     $HADOOP_PREFIX/sbin/mr-jobhistory-daemon.sh --config $HADOOP_PREFIX/etc/hadoop start historyserver
     # keep container running
+     $HADOOP_PREFIX/sbin/hadoop-daemon.sh --config $HADOOP_PREFIX/etc/hadoop --script hdfs start datanode
+         $HADOOP_PREFIX/sbin/yarn-daemon.sh --config $HADOOP_PREFIX/etc/hadoop start nodemanager
     tail -f /var/log/dmesg
     ;;
   slave)
