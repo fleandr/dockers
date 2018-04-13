@@ -99,7 +99,7 @@
 # allows lowering thread priority without being root on linux - probably
 # not necessary on Windows but doesn't harm anything.
 # see http://tech.stolsvik.com/2010/01/linux-java-thread-priorities-workar
--XX:ThreadPriorityPolicy=42
+#-XX:ThreadPriorityPolicy=42
 
 # Enable heap-dump if there's an OOM
 -XX:+HeapDumpOnOutOfMemoryError
@@ -200,27 +200,28 @@
 
 ### CMS Settings
 
--XX:+UseParNewGC
--XX:+UseConcMarkSweepGC
--XX:+CMSParallelRemarkEnabled
--XX:SurvivorRatio=8
--XX:MaxTenuringThreshold=1
--XX:CMSInitiatingOccupancyFraction=75
--XX:+UseCMSInitiatingOccupancyOnly
--XX:CMSWaitDuration=10000
--XX:+CMSParallelInitialMarkEnabled
--XX:+CMSEdenChunksRecordAlways
+#-XX:+UseParNewGC
+#-XX:+UseConcMarkSweepGC
+#-XX:+CMSParallelRemarkEnabled
+#-XX:SurvivorRatio=8
+#-XX:MaxTenuringThreshold=1
+#-XX:CMSInitiatingOccupancyFraction=75
+#-XX:+UseCMSInitiatingOccupancyOnly
+#-XX:CMSWaitDuration=10000
+#-XX:+CMSParallelInitialMarkEnabled
+#-XX:+CMSEdenChunksRecordAlways
 # some JVMs will fill up their heap when accessed via JMX, see CASSANDRA-6541
--XX:+CMSClassUnloadingEnabled
+#-XX:+CMSClassUnloadingEnabled
 
 ### G1 Settings (experimental, comment previous section and uncomment section below to enable)
 
 ## Use the Hotspot garbage-first collector.
-#-XX:+UseG1GC
+-XX:+UseG1GC
+#-XX:+UseParallelGC
 #
 ## Have the JVM do less remembered set work during STW, instead
 ## preferring concurrent GC. Reduces p99.9 latency.
-#-XX:G1RSetUpdatingPauseTimePercent=5
+-XX:G1RSetUpdatingPauseTimePercent=5
 #
 ## Main G1GC tunable: lowering the pause target will lower throughput and vise versa.
 ## 200ms is the JVM default and lowest viable setting
@@ -236,7 +237,7 @@
 # For systems with > 8 cores, the default ParallelGCThreads is 5/8 the number of logical cores.
 # Otherwise equal to the number of cores when 8 or less.
 # Machines with > 10 cores should try setting these to <= full cores.
-#-XX:ParallelGCThreads=16
+-XX:ParallelGCThreads=50
 # By default, ConcGCThreads is 1/4 of ParallelGCThreads.
 # Setting both to the same value can reduce STW durations.
 #-XX:ConcGCThreads=16
@@ -244,13 +245,13 @@
 ### GC logging options -- uncomment to enable
 
 -XX:+PrintGCDetails
--XX:+PrintGCDateStamps
--XX:+PrintHeapAtGC
--XX:+PrintTenuringDistribution
--XX:+PrintGCApplicationStoppedTime
--XX:+PrintPromotionFailure
+#-XX:+PrintGCDateStamps
+#-XX:+PrintHeapAtGC
+#-XX:+PrintTenuringDistribution
+#-XX:+PrintGCApplicationStoppedTime
+#-XX:+PrintPromotionFailure
 #-XX:PrintFLSStatistics=1
 #-Xloggc:/var/log/cassandra/gc.log
--XX:+UseGCLogFileRotation
--XX:NumberOfGCLogFiles=10
--XX:GCLogFileSize=10M
+#-XX:+UseGCLogFileRotation
+#-XX:NumberOfGCLogFiles=10
+#-XX:GCLogFileSize=10M

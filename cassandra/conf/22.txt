@@ -1,0 +1,133 @@
+[0.001s][warning][gc] -Xloggc is deprecated. Will use -Xlog:gc:/home/vlad/cassandra/bin/../logs/gc.log instead.
+[0.001s][warning][gc] -XX:+PrintGCDetails is deprecated. Will use -Xlog:gc* instead.
+CompileCommand: dontinline org/apache/cassandra/db/Columns$Serializer.deserializeLargeSubset(Lorg/apache/cassandra/io/util/DataInputPlus;Lorg/apache/cassandra/db/Columns;I)Lorg/apache/cassandra/db/Columns;
+CompileCommand: dontinline org/apache/cassandra/db/Columns$Serializer.serializeLargeSubset(Ljava/util/Collection;ILorg/apache/cassandra/db/Columns;ILorg/apache/cassandra/io/util/DataOutputPlus;)V
+CompileCommand: dontinline org/apache/cassandra/db/Columns$Serializer.serializeLargeSubsetSize(Ljava/util/Collection;ILorg/apache/cassandra/db/Columns;I)I
+CompileCommand: dontinline org/apache/cassandra/db/commitlog/AbstractCommitLogSegmentManager.advanceAllocatingFrom(Lorg/apache/cassandra/db/commitlog/CommitLogSegment;)V
+CompileCommand: dontinline org/apache/cassandra/db/transform/BaseIterator.tryGetMoreContents()Z
+CompileCommand: dontinline org/apache/cassandra/db/transform/StoppingTransformation.stop()V
+CompileCommand: dontinline org/apache/cassandra/db/transform/StoppingTransformation.stopInPartition()V
+CompileCommand: dontinline org/apache/cassandra/io/util/BufferedDataOutputStreamPlus.doFlush(I)V
+CompileCommand: dontinline org/apache/cassandra/io/util/BufferedDataOutputStreamPlus.writeExcessSlow()V
+CompileCommand: dontinline org/apache/cassandra/io/util/BufferedDataOutputStreamPlus.writeSlow(JI)V
+CompileCommand: dontinline org/apache/cassandra/io/util/RebufferingInputStream.readPrimitiveSlowly(I)J
+CompileCommand: inline org/apache/cassandra/db/rows/UnfilteredSerializer.serializeRowBody(Lorg/apache/cassandra/db/rows/Row;ILorg/apache/cassandra/db/SerializationHeader;Lorg/apache/cassandra/io/util/DataOutputPlus;)V
+CompileCommand: inline org/apache/cassandra/io/util/Memory.checkBounds(JJ)V
+CompileCommand: inline org/apache/cassandra/io/util/SafeMemory.checkBounds(JJ)V
+CompileCommand: inline org/apache/cassandra/utils/AsymmetricOrdering.selectBoundary(Lorg/apache/cassandra/utils/AsymmetricOrdering/Op;II)I
+CompileCommand: inline org/apache/cassandra/utils/AsymmetricOrdering.strictnessOfLessThan(Lorg/apache/cassandra/utils/AsymmetricOrdering/Op;)I
+CompileCommand: inline org/apache/cassandra/utils/BloomFilter.indexes(Lorg/apache/cassandra/utils/IFilter/FilterKey;)[J
+CompileCommand: inline org/apache/cassandra/utils/BloomFilter.setIndexes(JJIJ[J)V
+CompileCommand: inline org/apache/cassandra/utils/ByteBufferUtil.compare(Ljava/nio/ByteBuffer;[B)I
+CompileCommand: inline org/apache/cassandra/utils/ByteBufferUtil.compare([BLjava/nio/ByteBuffer;)I
+CompileCommand: inline org/apache/cassandra/utils/ByteBufferUtil.compareUnsigned(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I
+CompileCommand: inline org/apache/cassandra/utils/FastByteOperations$UnsafeOperations.compareTo(Ljava/lang/Object;JILjava/lang/Object;JI)I
+CompileCommand: inline org/apache/cassandra/utils/FastByteOperations$UnsafeOperations.compareTo(Ljava/lang/Object;JILjava/nio/ByteBuffer;)I
+CompileCommand: inline org/apache/cassandra/utils/FastByteOperations$UnsafeOperations.compareTo(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I
+CompileCommand: inline org/apache/cassandra/utils/vint/VIntCoding.encodeVInt(JI)[B
+INFO  [main] 2018-03-26 15:52:40,771 YamlConfigurationLoader.java:89 - Configuration location: file:/home/vlad/cassandra/conf/cassandra.yaml
+INFO  [main] 2018-03-26 15:52:41,049 Config.java:495 - Node configuration:[allocate_tokens_for_keyspace=null; authenticator=AllowAllAuthenticator; authorizer=AllowAllAuthorizer; auto_bootstrap=true; auto_snapshot=true; back_pressure_enabled=false; back_pressure_strategy=org.apache.cassandra.net.RateBasedBackPressure{high_ratio=0.9, factor=5, flow=FAST}; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=10240; broadcast_address=null; broadcast_rpc_address=null; buffer_pool_use_heap_if_exhausted=true; cas_contention_timeout_in_ms=1000; cdc_enabled=false; cdc_free_space_check_interval_ms=250; cdc_raw_directory=/var/lib/cassandra/cdc_raw; cdc_total_space_in_mb=0; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_cache_size_in_kb=2; column_index_size_in_kb=64; commit_failure_policy=stop; commitlog_compression=null; commitlog_directory=/var/lib/cassandra/commitlog; commitlog_max_compression_buffers_in_pool=3; commitlog_periodic_queue_size=-1; commitlog_segment_size_in_mb=32; commitlog_sync=periodic; commitlog_sync_batch_window_in_ms=NaN; commitlog_sync_period_in_ms=10000; commitlog_total_space_in_mb=8192; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=1600; concurrent_compactors=20; concurrent_counter_writes=32; concurrent_materialized_view_writes=32; concurrent_reads=32; concurrent_replicates=null; concurrent_writes=32; counter_cache_keys_to_save=2147483647; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; credentials_cache_max_entries=1000; credentials_update_interval_in_ms=-1; credentials_validity_in_ms=2000; cross_node_timeout=false; data_file_directories=[Ljava.lang.String;@5ef5c734; disk_access_mode=auto; disk_failure_policy=stop; disk_optimization_estimate_percentile=0.95; disk_optimization_page_cross_chance=0.1; disk_optimization_strategy=ssd; dynamic_snitch=true; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_materialized_views=true; enable_scripted_user_defined_functions=false; enable_user_defined_functions=false; enable_user_defined_functions_threads=true; encryption_options=null; endpoint_snitch=SimpleSnitch; file_cache_round_up=null; file_cache_size_in_mb=512; gc_log_threshold_in_ms=200; gc_warn_threshold_in_ms=1000; hinted_handoff_disabled_datacenters=[]; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; hints_compression=null; hints_directory=/var/lib/cassandra/hints; hints_flush_period_in_ms=10000; incremental_backups=false; index_interval=null; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; initial_token=null; inter_dc_stream_throughput_outbound_megabits_per_sec=200; inter_dc_tcp_nodelay=false; internode_authenticator=null; internode_compression=dc; internode_recv_buff_size_in_bytes=0; internode_send_buff_size_in_bytes=0; key_cache_keys_to_save=2147483647; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=saber-14; listen_interface=null; listen_interface_prefer_ipv6=false; listen_on_broadcast_address=false; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; max_hints_file_size_in_mb=128; max_mutation_size_in_kb=null; max_streaming_retries=3; max_value_size_in_mb=256; memtable_allocation_type=heap_buffers; memtable_cleanup_threshold=null; memtable_flush_writers=40; memtable_heap_space_in_mb=8048; memtable_offheap_space_in_mb=8048; min_free_space_per_drive_in_mb=50; native_transport_max_concurrent_connections=-1; native_transport_max_concurrent_connections_per_ip=-1; native_transport_max_frame_size_in_mb=256; native_transport_max_threads=128; native_transport_port=9042; native_transport_port_ssl=null; num_tokens=256; otc_backlog_expiration_interval_ms=200; otc_coalescing_enough_coalesced_messages=8; otc_coalescing_strategy=DISABLED; otc_coalescing_window_us=200; partitioner=org.apache.cassandra.dht.Murmur3Partitioner; permissions_cache_max_entries=1000; permissions_update_interval_in_ms=-1; permissions_validity_in_ms=2000; phi_convict_threshold=8.0; prepared_statements_cache_size_mb=null; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; request_scheduler=org.apache.cassandra.scheduler.NoScheduler; request_scheduler_id=null; request_scheduler_options=null; request_timeout_in_ms=10000; role_manager=CassandraRoleManager; roles_cache_max_entries=1000; roles_update_interval_in_ms=-1; roles_validity_in_ms=2000; row_cache_class_name=org.apache.cassandra.cache.OHCProvider; row_cache_keys_to_save=2147483647; row_cache_save_period=0; row_cache_size_in_mb=0; rpc_address=saber-14; rpc_interface=null; rpc_interface_prefer_ipv6=false; rpc_keepalive=true; rpc_listen_backlog=50; rpc_max_threads=2147483647; rpc_min_threads=16; rpc_port=9160; rpc_recv_buff_size_in_bytes=null; rpc_send_buff_size_in_bytes=null; rpc_server_type=sync; saved_caches_directory=/var/lib/cassandra/saved_caches; seed_provider=org.apache.cassandra.locator.SimpleSeedProvider{seeds=saber-14}; server_encryption_options=<REDACTED>; slow_query_log_timeout_in_ms=500; snapshot_before_compaction=false; ssl_storage_port=7001; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; start_rpc=false; storage_port=7000; stream_throughput_outbound_megabits_per_sec=2000; streaming_keep_alive_period_in_secs=300; streaming_socket_timeout_in_ms=86400000; thrift_framed_transport_size_in_mb=150; thrift_max_message_length_in_mb=16; thrift_prepared_statements_cache_size_mb=null; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; transparent_data_encryption_options=org.apache.cassandra.config.TransparentDataEncryptionOptions@d771cc9; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; unlogged_batch_across_partitions_warn_threshold=10; user_defined_function_fail_timeout=1500; user_defined_function_warn_timeout=500; user_function_timeout_policy=die; windows_timer_interval=1; write_request_timeout_in_ms=2000]
+INFO  [main] 2018-03-26 15:52:41,050 DatabaseDescriptor.java:367 - DiskAccessMode 'auto' determined to be mmap, indexAccessMode is mmap
+INFO  [main] 2018-03-26 15:52:41,051 DatabaseDescriptor.java:425 - Global memtable on-heap threshold is enabled at 8048MB
+INFO  [main] 2018-03-26 15:52:41,051 DatabaseDescriptor.java:429 - Global memtable off-heap threshold is enabled at 8048MB
+INFO  [main] 2018-03-26 15:52:41,056 FileUtils.java:80 - Cannot initialize un-mmaper.  (Are you using a non-Oracle JVM?)  Compacted data files will not be removed promptly.  Consider using an Oracle JVM or using standard disk access mode
+WARN  [main] 2018-03-26 15:52:41,060 DatabaseDescriptor.java:582 - memtable_cleanup_threshold is set very low [0.024390243], which may cause performance degradation
+INFO  [main] 2018-03-26 15:52:41,097 RateBasedBackPressure.java:123 - Initialized back-pressure with high ratio: 0.9, factor: 5, flow: FAST, window size: 2000.
+INFO  [main] 2018-03-26 15:52:41,098 DatabaseDescriptor.java:729 - Back-pressure is disabled with strategy org.apache.cassandra.net.RateBasedBackPressure{high_ratio=0.9, factor=5, flow=FAST}.
+INFO  [main] 2018-03-26 15:52:41,483 JMXServerUtils.java:246 - Configured JMX server at: service:jmx:rmi://127.0.0.1/jndi/rmi://127.0.0.1:7199/jmxrmi
+INFO  [main] 2018-03-26 15:52:41,489 CassandraDaemon.java:473 - Hostname: saber-14
+INFO  [main] 2018-03-26 15:52:41,490 CassandraDaemon.java:480 - JVM vendor/version: OpenJDK 64-Bit Server VM/9-release
+INFO  [main] 2018-03-26 15:52:41,491 CassandraDaemon.java:481 - Heap size: 24.438GiB/24.438GiB
+INFO  [main] 2018-03-26 15:52:41,496 CassandraDaemon.java:486 - Metaspace Non-heap memory: init = 0(0K) used = 21930944(21416K) committed = 22802432(22268K) max = -1(-1K)
+INFO  [main] 2018-03-26 15:52:41,516 CassandraDaemon.java:486 - G1 Survivor Space Heap memory: init = 0(0K) used = 16777216(16384K) committed = 16777216(16384K) max = -1(-1K)
+INFO  [main] 2018-03-26 15:52:41,516 CassandraDaemon.java:486 - Compressed Class Space Non-heap memory: init = 0(0K) used = 2430120(2373K) committed = 2699264(2636K) max = 1073741824(1048576K)
+INFO  [main] 2018-03-26 15:52:41,517 CassandraDaemon.java:486 - G1 Eden Space Heap memory: init = 1375731712(1343488K) used = 109051904(106496K) committed = 1375731712(1343488K) max = -1(-1K)
+INFO  [main] 2018-03-26 15:52:41,517 CassandraDaemon.java:486 - G1 Old Gen Heap memory: init = 24863834112(24281088K) used = 0(0K) committed = 24863834112(24281088K) max = 26239565824(25624576K)
+INFO  [main] 2018-03-26 15:52:41,517 CassandraDaemon.java:486 - CodeCache Non-heap memory: init = 2555904(2496K) used = 10936960(10680K) committed = 10944512(10688K) max = 134217728(131072K)
+INFO  [main] 2018-03-26 15:52:41,518 CassandraDaemon.java:488 - Classpath: /home/vlad/cassandra/bin/../conf:/home/vlad/cassandra/bin/../build/classes/main:/home/vlad/cassandra/bin/../build/classes/thrift:/home/vlad/cassandra/bin/../lib/airline-0.6.jar:/home/vlad/cassandra/bin/../lib/antlr-runtime-3.5.2.jar:/home/vlad/cassandra/bin/../lib/asm-5.0.4.jar:/home/vlad/cassandra/bin/../lib/caffeine-2.2.6.jar:/home/vlad/cassandra/bin/../lib/cassandra-driver-core-3.0.1-shaded.jar:/home/vlad/cassandra/bin/../lib/commons-cli-1.1.jar:/home/vlad/cassandra/bin/../lib/commons-codec-1.9.jar:/home/vlad/cassandra/bin/../lib/commons-lang3-3.1.jar:/home/vlad/cassandra/bin/../lib/commons-math3-3.2.jar:/home/vlad/cassandra/bin/../lib/compress-lzf-0.8.4.jar:/home/vlad/cassandra/bin/../lib/concurrentlinkedhashmap-lru-1.4.jar:/home/vlad/cassandra/bin/../lib/concurrent-trees-2.4.0.jar:/home/vlad/cassandra/bin/../lib/disruptor-3.0.1.jar:/home/vlad/cassandra/bin/../lib/ecj-4.4.2.jar:/home/vlad/cassandra/bin/../lib/guava-18.0.jar:/home/vlad/cassandra/bin/../lib/HdrHistogram-2.1.9.jar:/home/vlad/cassandra/bin/../lib/high-scale-lib-1.0.6.jar:/home/vlad/cassandra/bin/../lib/hppc-0.5.4.jar:/home/vlad/cassandra/bin/../lib/jackson-core-asl-1.9.13.jar:/home/vlad/cassandra/bin/../lib/jackson-mapper-asl-1.9.13.jar:/home/vlad/cassandra/bin/../lib/jamm-0.3.0.jar:/home/vlad/cassandra/bin/../lib/javax.inject.jar:/home/vlad/cassandra/bin/../lib/jbcrypt-0.3m.jar:/home/vlad/cassandra/bin/../lib/jcl-over-slf4j-1.7.7.jar:/home/vlad/cassandra/bin/../lib/jctools-core-1.2.1.jar:/home/vlad/cassandra/bin/../lib/jflex-1.6.0.jar:/home/vlad/cassandra/bin/../lib/jna-4.2.2.jar:/home/vlad/cassandra/bin/../lib/joda-time-2.4.jar:/home/vlad/cassandra/bin/../lib/json-simple-1.1.jar:/home/vlad/cassandra/bin/../lib/jstackjunit-0.0.1.jar:/home/vlad/cassandra/bin/../lib/libthrift-0.9.2.jar:/home/vlad/cassandra/bin/../lib/log4j-over-slf4j-1.7.7.jar:/home/vlad/cassandra/bin/../lib/logback-classic-1.1.3.jar:/home/vlad/cassandra/bin/../lib/logback-core-1.1.3.jar:/home/vlad/cassandra/bin/../lib/lz4-1.3.0.jar:/home/vlad/cassandra/bin/../lib/metrics-core-3.1.0.jar:/home/vlad/cassandra/bin/../lib/metrics-jvm-3.1.0.jar:/home/vlad/cassandra/bin/../lib/metrics-logback-3.1.0.jar:/home/vlad/cassandra/bin/../lib/netty-all-4.0.44.Final.jar:/home/vlad/cassandra/bin/../lib/ohc-core-0.4.4.jar:/home/vlad/cassandra/bin/../lib/ohc-core-j8-0.4.4.jar:/home/vlad/cassandra/bin/../lib/reporter-config3-3.0.3.jar:/home/vlad/cassandra/bin/../lib/reporter-config-base-3.0.3.jar:/home/vlad/cassandra/bin/../lib/sigar-1.6.4.jar:/home/vlad/cassandra/bin/../lib/slf4j-api-1.7.7.jar:/home/vlad/cassandra/bin/../lib/snakeyaml-1.11.jar:/home/vlad/cassandra/bin/../lib/snappy-java-1.1.1.7.jar:/home/vlad/cassandra/bin/../lib/snowball-stemmer-1.3.0.581.1.jar:/home/vlad/cassandra/bin/../lib/ST4-4.0.8.jar:/home/vlad/cassandra/bin/../lib/stream-2.5.2.jar:/home/vlad/cassandra/bin/../lib/thrift-server-0.3.7.jar:/home/vlad/cassandra/bin/../lib/jsr223/*/*.jar
+INFO  [main] 2018-03-26 15:52:41,520 CassandraDaemon.java:490 - JVM Arguments: [-Xloggc:/home/vlad/cassandra/bin/../logs/gc.log, -Dcassandra.available_processors=250, -ea, -XX:+UseThreadPriorities, -XX:+HeapDumpOnOutOfMemoryError, -Xss1024k, -XX:StringTableSize=1000003, -XX:+AlwaysPreTouch, -XX:-UseBiasedLocking, -XX:+PerfDisableSharedMem, -Djava.net.preferIPv4Stack=true, -XX:+UseG1GC, -XX:G1RSetUpdatingPauseTimePercent=5, -XX:ParallelGCThreads=50, -XX:+PrintGCDetails, -Xms25024M, -Xmx25024M, -XX:CompileCommandFile=/home/vlad/cassandra/bin/../conf/hotspot_compiler, -javaagent:/home/vlad/cassandra/bin/../lib/jamm-0.3.0.jar, -Dcassandra.jmx.local.port=7199, -Dcom.sun.management.jmxremote.authenticate=false, -Dcom.sun.management.jmxremote.password.file=/etc/cassandra/jmxremote.password, -Djava.library.path=/home/vlad/cassandra/bin/../lib/sigar-bin, -Dcassandra.libjemalloc=/usr/lib/aarch64-linux-gnu/libjemalloc.so.1, -XX:OnOutOfMemoryError=kill -9 %p, -Dlogback.configurationFile=logback.xml, -Dcassandra.logdir=/home/vlad/cassandra/bin/../logs, -Dcassandra.storagedir=/home/vlad/cassandra/bin/../data]
+INFO  [main] 2018-03-26 15:52:47,097 NativeLibrary.java:174 - JNA mlockall successful
+INFO  [main] 2018-03-26 15:52:47,098 StartupChecks.java:140 - jemalloc seems to be preloaded from /usr/lib/aarch64-linux-gnu/libjemalloc.so.1
+WARN  [main] 2018-03-26 15:52:47,098 StartupChecks.java:169 - JMX is not enabled to receive remote connections. Please see cassandra-env.sh for more info.
+INFO  [main] 2018-03-26 15:52:47,102 SigarLibrary.java:44 - Initializing SIGAR library
+INFO  [main] 2018-03-26 15:52:47,120 SigarLibrary.java:57 - Could not initialize SIGAR library org.hyperic.sigar.Sigar.getFileSystemListNative()[Lorg/hyperic/sigar/FileSystem; 
+INFO  [main] 2018-03-26 15:52:47,121 SigarLibrary.java:185 - Sigar could not be initialized, test for checking degraded mode omitted.
+INFO  [main] 2018-03-26 15:52:47,268 QueryProcessor.java:116 - Initialized prepared statement caches with 97 MB (native) and 97 MB (Thrift)
+INFO  [main] 2018-03-26 15:52:47,826 ColumnFamilyStore.java:411 - Initializing system.IndexInfo
+INFO  [main] 2018-03-26 15:52:48,735 ColumnFamilyStore.java:411 - Initializing system.batches
+INFO  [main] 2018-03-26 15:52:48,744 ColumnFamilyStore.java:411 - Initializing system.paxos
+INFO  [main] 2018-03-26 15:52:48,758 ColumnFamilyStore.java:411 - Initializing system.local
+INFO  [SSTableBatchOpen:1] 2018-03-26 15:52:48,783 BufferPool.java:230 - Global buffer pool is enabled, when pool is exhausted (max is 512.000MiB) it will allocate on heap
+INFO  [main] 2018-03-26 15:52:49,019 CacheService.java:112 - Initializing key cache with capacity of 100 MBs.
+INFO  [main] 2018-03-26 15:52:49,030 CacheService.java:134 - Initializing row cache with capacity of 0 MBs
+INFO  [main] 2018-03-26 15:52:49,032 CacheService.java:163 - Initializing counter cache with capacity of 50 MBs
+INFO  [main] 2018-03-26 15:52:49,035 CacheService.java:174 - Scheduling counter cache save to every 7200 seconds (going to save all keys).
+INFO  [main] 2018-03-26 15:52:49,050 ColumnFamilyStore.java:411 - Initializing system.peers
+INFO  [main] 2018-03-26 15:52:49,059 ColumnFamilyStore.java:411 - Initializing system.peer_events
+INFO  [main] 2018-03-26 15:52:49,067 ColumnFamilyStore.java:411 - Initializing system.range_xfers
+INFO  [main] 2018-03-26 15:52:49,077 ColumnFamilyStore.java:411 - Initializing system.compaction_history
+INFO  [main] 2018-03-26 15:52:49,093 ColumnFamilyStore.java:411 - Initializing system.sstable_activity
+INFO  [main] 2018-03-26 15:52:49,106 ColumnFamilyStore.java:411 - Initializing system.size_estimates
+INFO  [main] 2018-03-26 15:52:49,118 ColumnFamilyStore.java:411 - Initializing system.available_ranges
+INFO  [main] 2018-03-26 15:52:49,126 ColumnFamilyStore.java:411 - Initializing system.transferred_ranges
+INFO  [main] 2018-03-26 15:52:49,134 ColumnFamilyStore.java:411 - Initializing system.views_builds_in_progress
+INFO  [main] 2018-03-26 15:52:49,142 ColumnFamilyStore.java:411 - Initializing system.built_views
+INFO  [main] 2018-03-26 15:52:49,149 ColumnFamilyStore.java:411 - Initializing system.hints
+INFO  [main] 2018-03-26 15:52:49,159 ColumnFamilyStore.java:411 - Initializing system.batchlog
+INFO  [main] 2018-03-26 15:52:49,166 ColumnFamilyStore.java:411 - Initializing system.prepared_statements
+INFO  [main] 2018-03-26 15:52:49,174 ColumnFamilyStore.java:411 - Initializing system.schema_keyspaces
+INFO  [main] 2018-03-26 15:52:49,184 ColumnFamilyStore.java:411 - Initializing system.schema_columnfamilies
+INFO  [main] 2018-03-26 15:52:49,191 ColumnFamilyStore.java:411 - Initializing system.schema_columns
+INFO  [main] 2018-03-26 15:52:49,197 ColumnFamilyStore.java:411 - Initializing system.schema_triggers
+INFO  [main] 2018-03-26 15:52:49,204 ColumnFamilyStore.java:411 - Initializing system.schema_usertypes
+INFO  [main] 2018-03-26 15:52:49,211 ColumnFamilyStore.java:411 - Initializing system.schema_functions
+INFO  [main] 2018-03-26 15:52:49,218 ColumnFamilyStore.java:411 - Initializing system.schema_aggregates
+INFO  [main] 2018-03-26 15:52:49,220 ViewManager.java:137 - Not submitting build tasks for views in keyspace system as storage service is not initialized
+Exception (java.lang.ExceptionInInitializerError) encountered during startup: null
+ERROR [main] 2018-03-26 15:52:49,306 CassandraDaemon.java:708 - Exception encountered during startup
+java.lang.ExceptionInInitializerError: null
+	at org.apache.cassandra.utils.ObjectSizes.sizeOfArray(ObjectSizes.java:94) ~[main/:na]
+	at org.apache.cassandra.utils.ObjectSizes.sizeOfArray(ObjectSizes.java:49) ~[main/:na]
+	at org.apache.cassandra.cache.KeyCacheKey.unsharedHeapSize(KeyCacheKey.java:54) ~[main/:na]
+	at org.apache.cassandra.cache.ConcurrentLinkedHashCache$1.weightOf(ConcurrentLinkedHashCache.java:57) ~[main/:na]
+	at org.apache.cassandra.cache.ConcurrentLinkedHashCache$1.weightOf(ConcurrentLinkedHashCache.java:54) ~[main/:na]
+	at com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap$BoundedEntryWeigher.weightOf(ConcurrentLinkedHashMap.java:1394) ~[concurrentlinkedhashmap-lru-1.4.jar:na]
+	at com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put(ConcurrentLinkedHashMap.java:720) ~[concurrentlinkedhashmap-lru-1.4.jar:na]
+	at com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put(ConcurrentLinkedHashMap.java:698) ~[concurrentlinkedhashmap-lru-1.4.jar:na]
+	at org.apache.cassandra.cache.ConcurrentLinkedHashCache.put(ConcurrentLinkedHashCache.java:101) ~[main/:na]
+	at org.apache.cassandra.cache.ConcurrentLinkedHashCache.put(ConcurrentLinkedHashCache.java:27) ~[main/:na]
+	at org.apache.cassandra.cache.InstrumentingCache.put(InstrumentingCache.java:43) ~[main/:na]
+	at org.apache.cassandra.io.sstable.format.SSTableReader.cacheKey(SSTableReader.java:1499) ~[main/:na]
+	at org.apache.cassandra.io.sstable.format.big.BigTableReader.getPosition(BigTableReader.java:260) ~[main/:na]
+	at org.apache.cassandra.io.sstable.format.SSTableReader.getPosition(SSTableReader.java:1550) ~[main/:na]
+	at org.apache.cassandra.io.sstable.format.big.BigTableReader.iterator(BigTableReader.java:64) ~[main/:na]
+	at org.apache.cassandra.db.rows.UnfilteredRowIteratorWithLowerBound.initializeIterator(UnfilteredRowIteratorWithLowerBound.java:107) ~[main/:na]
+	at org.apache.cassandra.db.rows.LazilyInitializedUnfilteredRowIterator.maybeInit(LazilyInitializedUnfilteredRowIterator.java:48) ~[main/:na]
+	at org.apache.cassandra.db.rows.LazilyInitializedUnfilteredRowIterator.computeNext(LazilyInitializedUnfilteredRowIterator.java:99) ~[main/:na]
+	at org.apache.cassandra.db.rows.UnfilteredRowIteratorWithLowerBound.computeNext(UnfilteredRowIteratorWithLowerBound.java:116) ~[main/:na]
+	at org.apache.cassandra.db.rows.UnfilteredRowIteratorWithLowerBound.computeNext(UnfilteredRowIteratorWithLowerBound.java:47) ~[main/:na]
+	at org.apache.cassandra.utils.AbstractIterator.hasNext(AbstractIterator.java:47) ~[main/:na]
+	at org.apache.cassandra.db.rows.UnfilteredRowIterator.isEmpty(UnfilteredRowIterator.java:67) ~[main/:na]
+	at org.apache.cassandra.db.SinglePartitionReadCommand.withSSTablesIterated(SinglePartitionReadCommand.java:850) ~[main/:na]
+	at org.apache.cassandra.db.SinglePartitionReadCommand.queryMemtableAndDiskInternal(SinglePartitionReadCommand.java:794) ~[main/:na]
+	at org.apache.cassandra.db.SinglePartitionReadCommand.queryMemtableAndDisk(SinglePartitionReadCommand.java:669) ~[main/:na]
+	at org.apache.cassandra.db.SinglePartitionReadCommand.queryStorage(SinglePartitionReadCommand.java:503) ~[main/:na]
+	at org.apache.cassandra.db.ReadCommand.executeLocally(ReadCommand.java:417) ~[main/:na]
+	at org.apache.cassandra.db.SinglePartitionReadCommand$Group.executeLocally(SinglePartitionReadCommand.java:1238) ~[main/:na]
+	at org.apache.cassandra.db.SinglePartitionReadCommand$Group.executeInternal(SinglePartitionReadCommand.java:1212) ~[main/:na]
+	at org.apache.cassandra.cql3.statements.SelectStatement.executeInternal(SelectStatement.java:459) ~[main/:na]
+	at org.apache.cassandra.cql3.statements.SelectStatement.executeInternal(SelectStatement.java:445) ~[main/:na]
+	at org.apache.cassandra.cql3.statements.SelectStatement.executeInternal(SelectStatement.java:118) ~[main/:na]
+	at org.apache.cassandra.cql3.QueryProcessor.executeInternal(QueryProcessor.java:313) ~[main/:na]
+	at org.apache.cassandra.db.SystemKeyspace.checkHealth(SystemKeyspace.java:947) ~[main/:na]
+	at org.apache.cassandra.service.StartupChecks$10.execute(StartupChecks.java:422) ~[main/:na]
+	at org.apache.cassandra.service.StartupChecks.verify(StartupChecks.java:125) ~[main/:na]
+	at org.apache.cassandra.service.CassandraDaemon.setup(CassandraDaemon.java:200) [main/:na]
+	at org.apache.cassandra.service.CassandraDaemon.activate(CassandraDaemon.java:602) [main/:na]
+	at org.apache.cassandra.service.CassandraDaemon.main(CassandraDaemon.java:691) [main/:na]
+Caused by: java.lang.StringIndexOutOfBoundsException: begin 0, end -1, length 23
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3116) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:1885) ~[na:na]
+	at org.github.jamm.MemoryLayoutSpecification.getEffectiveMemoryLayoutSpecification(MemoryLayoutSpecification.java:190) ~[jamm-0.3.0.jar:na]
+	at org.github.jamm.MemoryLayoutSpecification.<clinit>(MemoryLayoutSpecification.java:31) ~[jamm-0.3.0.jar:na]
+	... 39 common frames omitted
